@@ -1,38 +1,45 @@
 .App {
   text-align: center;
+  direction: rtl;
+}
+table {
+  font-family: arial, sans-serif;
+  border-collapse: collapse;
+  width: 100%;
+}
+th {
+  background-color: #b6e214;
+  text-align: center;
+  border: 1px solid #a7a6a6;
+  padding: 8px;
+}
+td {
+  border: 1px solid #a7a6a6;
+  text-align: center;
+  padding: 8px;
+  margin: auto;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+tr:nth-child(even) {
+  background-color: #dddddd;
 }
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.table-wrapper {
+  width: 100%;
+  background-color: rgb(219, 216, 216);
+  gap: 20px;
   display: flex;
   flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
 }
-
-.App-link {
-  color: #61dafb;
+.table-wrapper .sorting-wrapper {
+  display: flex;
+  justify-content: space-around;
 }
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.table-wrapper .sorting-wrapper .input-sort {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 10px;
+}
+.table-wrapper .sorting-wrapper .input-sort label {
+  font-size: 11px;
 }
